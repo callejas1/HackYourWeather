@@ -1,6 +1,5 @@
 import './App.css';
-// import CityCard from './Card';
-import WeatherApp from './WeatherApp';
+import WeatherApp from './Form-component/WeatherApp';
 
 function App() {
   return (
