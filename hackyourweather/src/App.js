@@ -1,6 +1,5 @@
 import './App.css';
 import WeatherApp from './Form-component/WeatherApp';
-require('dotenv').config();
 
 function App() {
   return (

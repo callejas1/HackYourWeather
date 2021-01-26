@@ -11,7 +11,7 @@ export default function WeatherApp() {
   const getWeather = async () => {
     try {
       const API_KEY = process.env.REACT_APP_OPENWEATHERMAP_API_KEY;
-      const WEATHER_URL = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=metric`;
+      const WEATHER_URL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=metric`;
       setError(null);
       setIsLoading(true);
       const res = await fetch(WEATHER_URL);
