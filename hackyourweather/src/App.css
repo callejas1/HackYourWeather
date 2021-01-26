@@ -1,5 +1,46 @@
+body {
+  backdrop-filter: blur(10px);
+}
 .App {
   display: flex;
   justify-content: center;
+  align-content: center;
   text-align: center;
+  flex-wrap: wrap;
+}
+
+.card-style {
+  background: #f8f8ff;
+  width: 400px;
+  margin-top: 60px;
+  padding: 5px;
+  box-shadow: 2px 2px 8px 2px #a9a9a9;
+}
+
+.search-input input[type='search'] {
+  padding: 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  border: none;
+  border-bottom: 1px solid #81c3f8;
+}
+
+.search-input button[type='submit'] {
+  padding: 10px;
+  margin: 8px 16px;
+  color: white;
+  background-color: #2196f3;
+  border: none;
+  width: 100px;
+}
+
+.error-message {
+  color: #b31b1b;
+  font-weight: bold;
+}
+
+.main-details {
+  padding-left: 40px;
+  text-align: left;
 }
