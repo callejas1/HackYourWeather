@@ -14,7 +14,7 @@ export default function WeatherApp() {
       const WEATHER_URL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=metric`;
       setError(null);
       setIsLoading(true);
-      if (cityName.length < 1 || cityName === '') {
+      if (cityName.length < 1 || cityName === ' ') {
         setError('Type the city name in the input field');
         return;
       }
