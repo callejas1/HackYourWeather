@@ -1,11 +1,6 @@
 import React from 'react';
 
-export default function Form({
-  handleChange,
-  handleSubmit,
-  getWeather,
-  cityName,
-}) {
+export const Form = ({ handleChange, handleSubmit, getWeather, cityName }) => {
   return (
     <form className="search-input" onSubmit={handleSubmit}>
       <input
@@ -25,4 +20,4 @@ export default function Form({
       </button>
     </form>
   );
-}
+};

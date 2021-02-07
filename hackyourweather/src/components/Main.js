@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Main({ weatherData }) {
+export const Main = ({ weatherData }) => {
   const { main, coord } = weatherData;
   return (
     <div className="main-details">
@@ -11,4 +11,4 @@ export default function Main({ weatherData }) {
       </p>
     </div>
   );
-}
+};

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Details({ weatherData }) {
+export const Details = ({ weatherData }) => {
   const { weather } = weatherData;
   return (
     <div className="main-details">
@@ -8,4 +8,4 @@ export default function Details({ weatherData }) {
       <h5>{weather[0].description}</h5>
     </div>
   );
-}
+};

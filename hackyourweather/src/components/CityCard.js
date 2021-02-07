@@ -1,9 +1,9 @@
 import React from 'react';
-import Heading from './Heading';
-import Main from './Main';
-import Details from './Details';
+import { Heading } from './Heading';
+import { Main } from './Main';
+import { Details } from './Details';
 
-export default function CityCard({ weatherData, removeCity, index }) {
+export const CityCard = ({ weatherData, removeCity, index }) => {
   return (
     <div className="card-style">
       <button
@@ -19,4 +19,4 @@ export default function CityCard({ weatherData, removeCity, index }) {
       <Main weatherData={weatherData} />
     </div>
   );
-}
+};

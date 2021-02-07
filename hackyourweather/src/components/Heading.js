@@ -1,10 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function Heading({ weatherData }) {
+export const Heading = ({ weatherData }) => {
   const { name, sys } = weatherData;
   return (
     <h2 className="main-details">
-      {name}, {sys.country}
+      <Link to={`/${weatherData.id}`}>
+        {name}, {sys.country}
+      </Link>
     </h2>
   );
-}
+};
