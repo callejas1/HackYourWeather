@@ -1,11 +1,11 @@
 import React from 'react';
 import {
-  LineChart,
+  AreaChart,
+  Area,
   XAxis,
   YAxis,
   Tooltip,
   CartesianGrid,
-  Line,
 } from 'recharts';
 
 export const Chart = ({ forecast }) => {
@@ -14,27 +14,30 @@ export const Chart = ({ forecast }) => {
 
   return (
     <>
-      <h3>
+      <h2>
         {name}, {country}
-      </h3>
-      <LineChart
-        fill="none"
+      </h2>
+      <AreaChart
+        data={list}
         width={700}
         height={500}
-        data={list}
         margin={{ top: 5, right: 20, left: 10, bottom: 5 }}
       >
         <XAxis dataKey="dt_txt" />
         <YAxis dataKey="main.temp" />
         <Tooltip />
-        <CartesianGrid stroke="#BBBBC4" key="grid" />
-        <Line
+        <CartesianGrid
+          verticalFill={['#fff', '#eee']}
+          fillOpacity={0.2}
+          strokeDasharray="3 3"
+        />
+        <Area
           type="monotone"
           dataKey="main.temp"
-          stroke="#8f00ff"
-          yAxisId={0}
+          fill="#89cff0"
+          stroke="#81C3F8"
         />
-      </LineChart>
+      </AreaChart>
     </>
   );
 };

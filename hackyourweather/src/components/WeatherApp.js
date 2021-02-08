@@ -14,13 +14,13 @@ export const WeatherApp = () => {
       const CITY_WEATHER_URL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=metric`;
       setError(null);
       setIsLoading(true);
-      if (cityName.length < 1 || cityName === ' ') {
+      if (!cityName.trim()) {
         setError('Type the city name in the input field');
         return;
       }
       const res = await fetch(CITY_WEATHER_URL);
       if (res.status !== 200) {
-        throw new Error('Please enter a valid city name and try again');
+        throw new Error('Request failed. Please try again.');
       }
       const newWeatherDetails = await res.json();
       setWeatherData((prevCard) => [newWeatherDetails, ...prevCard]);

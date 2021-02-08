@@ -27,7 +27,8 @@ body {
   border-bottom: 1px solid #81c3f8;
 }
 
-.search-input button[type='submit'] {
+.search-input button[type='submit'],
+.btn-history {
   padding: 10px;
   margin: 8px 16px;
   color: white;
@@ -65,4 +66,17 @@ body {
 .btn-remove:focus {
   outline: 1px solid #fff;
   outline-offset: -4px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #77b5fe;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #413bba;
 }

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useHistory } from 'react-router-dom';
 import { Chart } from './Chart';
 
 export const WeatherChart = () => {
+  const history = useHistory();
   const { cityId } = useParams();
   const [forecast, setForecast] = useState([]);
   const [isLoading, setLoading] = useState(false);
@@ -32,9 +33,18 @@ export const WeatherChart = () => {
       {!error && !isLoading && forecast.length !== 0 ? (
         <Chart forecast={forecast} />
       ) : (
-        !isLoading && !error && <p>Something happened</p>
+        isLoading && !error && <h6>Loading...</h6>
       )}
-      <Link to="/">Go Back!</Link>
+      <Link to="/">
+        <button
+          onClick={() => {
+            history.goBack();
+          }}
+          className="btn-history"
+        >
+          Go Back!
+        </button>
+      </Link>
     </div>
   );
 };
