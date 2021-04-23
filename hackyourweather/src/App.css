@@ -1,5 +1,7 @@
 body {
   backdrop-filter: blur(10px);
+  background-color: #212121;
+  color: #ffffff;
 }
 .App {
   display: flex;
@@ -12,10 +14,10 @@ body {
 
 .card-style {
   background: #f8f8ff;
+  color: #212121;
   width: 400px;
   margin-top: 60px;
   padding: 5px;
-  box-shadow: 2px 2px 8px 2px #a9a9a9;
 }
 
 .search-input input[type='search'] {

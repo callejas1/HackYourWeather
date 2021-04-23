@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { CityContext } from '../util/CityContext';
 import { CityCard } from './CityCard';
 import { Form } from './Form';
 
 export const WeatherApp = () => {
-  const [cityName, setCityName] = useState('');
-  const [weatherData, setWeatherData] = useState([]);
+  const { cityName, setCityName, weatherData, setWeatherData } = useContext(CityContext);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
